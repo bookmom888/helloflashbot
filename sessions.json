@@ -1,0 +1,50 @@
+{
+  "active_sessions": {
+    "d9b881ca-4445-4644-b124-bd55d60fc3e4": {
+      "session_id": "d9b881ca-4445-4644-b124-bd55d60fc3e4",
+      "proxy_id": "http://192.168.1.1:8080",
+      "fingerprint_id": "1755806241163_yuak7px8",
+      "current_url": "https://www.youtube.com/watch?v=test123",
+      "url_play_count": 3,
+      "total_play_count": 3,
+      "created_at": "2025-08-22T03:57:21.163270",
+      "last_used_at": "2025-08-22T03:57:21.167676",
+      "last_ip": "192.168.1.1",
+      "status": "active",
+      "cooldown_until": null
+    },
+    "2232e607-153a-4bd2-a9ad-66022fecdf9e": {
+      "session_id": "2232e607-153a-4bd2-a9ad-66022fecdf9e",
+      "proxy_id": "http://192.168.1.2:8080",
+      "fingerprint_id": "1755806241164_nh8cl9vs",
+      "current_url": "https://www.youtube.com/watch?v=test123",
+      "url_play_count": 3,
+      "total_play_count": 3,
+      "created_at": "2025-08-22T03:57:21.164657",
+      "last_used_at": "2025-08-22T03:57:21.169795",
+      "last_ip": "192.168.1.2",
+      "status": "active",
+      "cooldown_until": null
+    },
+    "592acbfa-bc86-4043-a839-94fd8222144e": {
+      "session_id": "592acbfa-bc86-4043-a839-94fd8222144e",
+      "proxy_id": "http://192.168.1.3:8080",
+      "fingerprint_id": "1755806241165_e1dv8sod",
+      "current_url": "https://www.youtube.com/watch?v=test123",
+      "url_play_count": 2,
+      "total_play_count": 2,
+      "created_at": "2025-08-22T03:57:21.165594",
+      "last_used_at": "2025-08-22T03:57:21.171222",
+      "last_ip": "192.168.1.3",
+      "status": "active",
+      "cooldown_until": null
+    }
+  },
+  "session_history": [],
+  "config": {
+    "max_url_plays_per_session": 3,
+    "session_cooldown_hours": 2,
+    "max_sessions_per_ip": 3,
+    "session_timeout_hours": 24
+  }
+}

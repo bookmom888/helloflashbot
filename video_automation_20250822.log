@@ -1,0 +1,300 @@
+2025-08-22 00:35:44 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 00:36:16 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 00:36:21 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 00:37:29 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 366
+2025-08-22 00:37:39 - video_automation - INFO - 成功导入 1 个代理
+2025-08-22 00:37:42 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 00:38:51 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 367
+2025-08-22 00:40:31 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 00:45:55 - video_automation - INFO - 成功导入 1 个代理
+2025-08-22 00:45:57 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 00:47:04 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 368
+2025-08-22 00:55:58 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 00:56:24 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 01:06:13 - video_automation - INFO - 成功导入 2 个代理
+2025-08-22 01:06:16 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 01:07:22 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 370
+2025-08-22 01:11:46 - video_automation - INFO - 成功导入 19 个代理
+2025-08-22 01:11:49 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 01:12:57 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 389
+2025-08-22 01:57:09 - video_automation - INFO - 已清理 389 个无效代理
+2025-08-22 01:57:17 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 01:57:22 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 01:57:28 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 01:57:33 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:00:23 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:00:26 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:00:35 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:00:38 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:01:05 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 02:01:09 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:01:11 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:01:20 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 02:02:57 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:03:00 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:11:03 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 02:11:08 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:11:13 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 1
+2025-08-22 02:12:59 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 02:13:14 - video_automation - INFO - 开始从API获取代理列表...
+2025-08-22 02:13:14 - video_automation - WARNING - 未获取到任何代理
+2025-08-22 02:15:15 - video_automation - INFO - 成功导入 144 个代理
+2025-08-22 02:15:20 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:15:47 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 144
+2025-08-22 02:28:17 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 02:28:20 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 02:28:37 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 85
+2025-08-22 02:30:43 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 02:30:48 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:03:56 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:04:01 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:04:17 - video_automation - INFO - 代理验证完成 - 有效: 0, 无效: 70
+2025-08-22 03:14:35 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:14:47 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:15:04 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:15:21 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:15:46 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:16:09 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:16:09 - video_automation - INFO - 创建窗口成功: 953057cc...
+2025-08-22 03:16:09 - video_automation - ERROR - 自动化运行失败: name 'time' is not defined
+2025-08-22 03:16:09 - video_automation - INFO - 窗口 953057cc... 状态: initializing - 创建浏览器...
+2025-08-22 03:16:16 - video_automation - INFO - 窗口 953057cc... 状态: active - 浏览器创建成功
+2025-08-22 03:16:16 - video_automation - INFO - 窗口 953057cc... 状态: playing - 播放视频: https://x.com/crazyclips_/status/1955736121570169220
+2025-08-22 03:16:34 - video_automation - INFO - 窗口 953057cc... 状态: error - 视频播放失败
+2025-08-22 03:16:43 - video_automation - INFO - 窗口 953057cc... 状态: closed - 窗口已关闭
+2025-08-22 03:18:08 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:18:08 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:18:08 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:18:08 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:18:08 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:18:08 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:18:22 - video_automation - INFO - 已清空URL列表
+2025-08-22 03:18:50 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:19:00 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:19:03 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:19:19 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:19:25 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:19:25 - video_automation - ERROR - 创建窗口失败
+2025-08-22 03:19:25 - video_automation - ERROR - 自动化运行失败: name 'time' is not defined
+2025-08-22 03:20:39 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:20:39 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:20:39 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:20:39 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:20:39 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:20:39 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:22:53 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:23:04 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:23:07 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:23:23 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:23:27 - video_automation - INFO - 开始自动化播放 - 窗口数: 3
+2025-08-22 03:23:27 - video_automation - INFO - 创建窗口成功: 1fa1fe2f...
+2025-08-22 03:23:27 - video_automation - INFO - 窗口 1fa1fe2f... 状态: initializing - 创建浏览器...
+2025-08-22 03:23:31 - video_automation - INFO - 创建窗口成功: 700bb8c9...
+2025-08-22 03:23:31 - video_automation - INFO - 窗口 700bb8c9... 状态: initializing - 创建浏览器...
+2025-08-22 03:23:35 - video_automation - INFO - 窗口 1fa1fe2f... 状态: active - 浏览器创建成功
+2025-08-22 03:23:35 - video_automation - INFO - 窗口 1fa1fe2f... 状态: playing - 播放视频: https://www.youtube.com/shorts/rHg-sBe-i_Q
+2025-08-22 03:23:35 - video_automation - INFO - 创建窗口成功: eb39c5e2...
+2025-08-22 03:23:35 - video_automation - INFO - 窗口 eb39c5e2... 状态: initializing - 创建浏览器...
+2025-08-22 03:23:35 - video_automation - INFO - 窗口 700bb8c9... 状态: error - 无法创建浏览器实例
+2025-08-22 03:23:35 - video_automation - INFO - 窗口 700bb8c9... 状态: closed - 窗口已关闭
+2025-08-22 03:23:37 - video_automation - INFO - 窗口 eb39c5e2... 状态: active - 浏览器创建成功
+2025-08-22 03:23:37 - video_automation - INFO - 窗口 eb39c5e2... 状态: playing - 播放视频: https://www.youtube.com/shorts/rHg-sBe-i_Q
+2025-08-22 03:24:09 - video_automation - INFO - 窗口 1fa1fe2f... 状态: error - 视频播放失败
+2025-08-22 03:24:12 - video_automation - INFO - 窗口 eb39c5e2... 状态: error - 视频播放失败
+2025-08-22 03:24:20 - video_automation - INFO - 窗口 1fa1fe2f... 状态: closed - 窗口已关闭
+2025-08-22 03:24:20 - video_automation - INFO - 窗口 eb39c5e2... 状态: closed - 窗口已关闭
+2025-08-22 03:25:08 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:25:17 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:25:32 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:25:48 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:25:48 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:25:48 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:25:48 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:25:48 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:25:48 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:26:01 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:26:01 - video_automation - ERROR - 创建窗口失败
+2025-08-22 03:26:07 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:26:07 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:26:07 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:26:07 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:26:07 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:26:07 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:26:16 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:26:28 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:26:34 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:26:37 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:26:54 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:26:57 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:26:57 - video_automation - INFO - 创建窗口成功: f7fffc0b...
+2025-08-22 03:26:57 - video_automation - INFO - 窗口 f7fffc0b... 状态: initializing - 创建浏览器...
+2025-08-22 03:27:04 - video_automation - INFO - 窗口 f7fffc0b... 状态: active - 浏览器创建成功
+2025-08-22 03:27:04 - video_automation - INFO - 窗口 f7fffc0b... 状态: playing - 播放视频: https://www.youtube.com/shorts/rHg-sBe-i_Q
+2025-08-22 03:27:38 - video_automation - INFO - 窗口 f7fffc0b... 状态: error - 视频播放失败
+2025-08-22 03:27:43 - video_automation - INFO - 窗口 f7fffc0b... 状态: closed - 窗口已关闭
+2025-08-22 03:28:56 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:28:56 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:28:56 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:28:56 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:28:56 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:28:56 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:29:35 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:29:41 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:29:48 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:29:50 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:30:03 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 69
+2025-08-22 03:30:07 - video_automation - INFO - 已清理 69 个无效代理
+2025-08-22 03:30:12 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:30:12 - video_automation - INFO - 创建窗口成功: a6bfd2e0...
+2025-08-22 03:30:12 - video_automation - INFO - 窗口 a6bfd2e0... 状态: initializing - 创建浏览器...
+2025-08-22 03:30:19 - video_automation - INFO - 窗口 a6bfd2e0... 状态: active - 浏览器创建成功
+2025-08-22 03:30:19 - video_automation - INFO - 窗口 a6bfd2e0... 状态: playing - 播放视频: https://www.youtube.com/shorts/rHg-sBe-i_Q
+2025-08-22 03:30:53 - video_automation - INFO - 窗口 a6bfd2e0... 状态: error - 视频播放失败
+2025-08-22 03:31:04 - video_automation - INFO - 窗口 a6bfd2e0... 状态: closed - 窗口已关闭
+2025-08-22 03:32:33 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:32:33 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:32:33 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:32:33 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:32:33 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:32:33 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:33:07 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:33:15 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:33:24 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:33:27 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:33:41 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 03:33:51 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:33:51 - video_automation - INFO - 创建窗口成功: d3f67ec9...
+2025-08-22 03:33:51 - video_automation - INFO - 窗口 d3f67ec9... 状态: initializing - 创建浏览器...
+2025-08-22 03:33:58 - video_automation - INFO - 窗口 d3f67ec9... 状态: active - 浏览器创建成功
+2025-08-22 03:33:58 - video_automation - INFO - 窗口 d3f67ec9... 状态: playing - 播放视频: https://www.youtube.com/watch?v=dwZ7L4Y0bFc
+2025-08-22 03:34:31 - video_automation - INFO - 窗口 d3f67ec9... 状态: error - 视频播放失败
+2025-08-22 03:34:44 - video_automation - INFO - 窗口 d3f67ec9... 状态: closed - 窗口已关闭
+2025-08-22 03:34:44 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:34:44 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:34:44 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:34:44 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:34:44 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:34:44 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:46:50 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:46:59 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:47:08 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:47:12 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:47:28 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 03:47:32 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:47:32 - video_automation - INFO - 创建窗口成功: d9e20a6c...
+2025-08-22 03:47:32 - video_automation - INFO - 窗口 d9e20a6c... 状态: initializing - 创建浏览器...
+2025-08-22 03:47:40 - video_automation - INFO - 窗口 d9e20a6c... 状态: active - 浏览器创建成功
+2025-08-22 03:47:40 - video_automation - INFO - 窗口 d9e20a6c... 状态: playing - 播放视频: https://www.youtube.com/watch?v=dwZ7L4Y0bFc
+2025-08-22 03:48:14 - video_automation - INFO - 窗口 d9e20a6c... 状态: error - 视频播放失败
+2025-08-22 03:48:24 - video_automation - INFO - 窗口 d9e20a6c... 状态: closed - 窗口已关闭
+2025-08-22 03:48:50 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:48:53 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:49:08 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 03:49:14 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:49:14 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:49:14 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:49:14 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:49:14 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:49:14 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:49:17 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:49:17 - video_automation - ERROR - 创建窗口失败
+2025-08-22 03:49:24 - video_automation - INFO - 行为分析报告:
+2025-08-22 03:49:24 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 03:49:24 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 03:49:24 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 03:49:24 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 03:49:24 - video_automation - INFO - 已停止自动化播放
+2025-08-22 03:49:43 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 03:49:52 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 03:49:57 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 03:50:05 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 03:50:23 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 03:50:27 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 03:50:27 - video_automation - INFO - 创建窗口成功: e10014c1...
+2025-08-22 03:50:27 - video_automation - INFO - 窗口 e10014c1... 状态: initializing - 创建浏览器...
+2025-08-22 03:50:36 - video_automation - INFO - 窗口 e10014c1... 状态: active - 浏览器创建成功
+2025-08-22 03:50:36 - video_automation - INFO - 窗口 e10014c1... 状态: playing - 播放视频: https://www.youtube.com/watch?v=dwZ7L4Y0bFc
+2025-08-22 03:51:11 - video_automation - INFO - 窗口 e10014c1... 状态: error - 视频播放失败
+2025-08-22 03:51:18 - video_automation - INFO - 窗口 e10014c1... 状态: closed - 窗口已关闭
+2025-08-22 04:00:54 - video_automation - INFO - 行为分析报告:
+2025-08-22 04:00:54 - video_automation - INFO -   - 疲劳度: 0.00
+2025-08-22 04:00:54 - video_automation - INFO -   - 学习曲线: 0.50
+2025-08-22 04:00:54 - video_automation - INFO -   - 错误次数: 0
+2025-08-22 04:00:54 - video_automation - INFO -   - 行为一致性: 0.80
+2025-08-22 04:00:54 - video_automation - INFO - 已停止自动化播放
+2025-08-22 11:18:30 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 11:18:32 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 11:18:41 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 11:18:44 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 11:18:48 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 11:18:55 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 11:18:55 - video_automation - INFO - 创建窗口成功: f09f8b69...
+2025-08-22 11:23:11 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 11:23:19 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 11:23:21 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 11:23:28 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 11:23:37 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 11:23:42 - video_automation - INFO - 开始自动化播放 - 窗口数: 2
+2025-08-22 11:23:42 - video_automation - INFO - 创建窗口成功: b4bc334c...
+2025-08-22 11:23:45 - video_automation - INFO - 创建窗口成功: af48e254...
+2025-08-22 13:37:47 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 13:37:56 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 13:37:58 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 13:38:14 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 13:38:21 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 13:38:23 - video_automation - INFO - 开始自动化播放 - 窗口数: 2
+2025-08-22 13:38:23 - video_automation - INFO - 创建窗口成功: df3a6d56...
+2025-08-22 13:38:26 - video_automation - INFO - 创建窗口成功: bac250cf...
+2025-08-22 13:48:41 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 13:48:49 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 13:48:52 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 13:49:07 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 13:49:14 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 13:49:17 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 13:49:17 - video_automation - INFO - 运行模式: 可视模式
+2025-08-22 13:49:17 - video_automation - INFO - 创建窗口成功: 38130856...
+2025-08-22 13:53:06 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 13:53:18 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 13:53:26 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 13:53:28 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 13:53:44 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 0
+2025-08-22 13:53:49 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 13:53:49 - video_automation - INFO - 运行模式: 可视模式
+2025-08-22 13:53:49 - video_automation - INFO - 创建窗口成功: c2781748...
+2025-08-22 13:59:09 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 13:59:33 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 14:09:46 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 14:10:03 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 14:11:53 - video_automation - INFO - 成功导入 19 个代理
+2025-08-22 14:11:59 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 14:12:01 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 14:12:17 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 19
+2025-08-22 14:12:24 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 14:12:24 - video_automation - INFO - 运行模式: 可视模式
+2025-08-22 14:12:24 - video_automation - INFO - 创建窗口成功: fa3445fa...
+2025-08-22 14:41:33 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 14:41:41 - video_automation - INFO - 成功导入 0 个代理
+2025-08-22 14:41:46 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 14:42:01 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 19
+2025-08-22 14:42:37 - video_automation - INFO - 选择平台: StreamBolt.tv
+2025-08-22 14:42:39 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 14:42:45 - video_automation - INFO - 选择平台: EarnVids.com
+2025-08-22 14:42:49 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 14:43:00 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 14:43:10 - video_automation - INFO - 开始自动化播放 - 窗口数: 1
+2025-08-22 14:43:10 - video_automation - INFO - 运行模式: 可视模式
+2025-08-22 14:43:10 - video_automation - INFO - 创建窗口成功: b3494cb2...
+2025-08-22 14:47:34 - video_automation - INFO - 成功导入 374 个代理
+2025-08-22 14:47:37 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 14:47:45 - video_automation - INFO - 成功导入URL文件: C:/Users/bookm/Desktop/out.txt
+2025-08-22 14:47:49 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 14:48:44 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 393
+2025-08-22 14:48:59 - video_automation - INFO - 开始自动化播放 - 窗口数: 2
+2025-08-22 14:48:59 - video_automation - INFO - 运行模式: 可视模式
+2025-08-22 14:48:59 - video_automation - INFO - 创建窗口成功: cd960081...
+2025-08-22 14:49:03 - video_automation - INFO - 创建窗口成功: 0cec828b...
+2025-08-22 16:52:01 - video_automation - INFO - 选择平台: 通用平台
+2025-08-22 16:52:40 - video_automation - INFO - 成功导入 265 个代理
+2025-08-22 16:52:45 - video_automation - INFO - 开始验证代理有效性...
+2025-08-22 16:54:46 - video_automation - INFO - 代理验证完成 - 有效: 1, 无效: 658
+2025-08-22 21:19:15 - video_automation - INFO - 选择平台: 通用平台

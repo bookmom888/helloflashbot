@@ -1,0 +1,25 @@
+selenium==4.15.2
+undetected-chromedriver==3.5.5
+fake-useragent==1.4.0
+requests==2.31.0
+pysocks==1.7.1
+tkinter-tooltip==2.1.0
+Pillow==10.1.0
+beautifulsoup4==4.12.2
+pyautogui==0.9.54
+opencv-python==4.8.1.78
+numpy==1.24.3
+random-user-agent==1.0.1
+webdriver-manager==4.0.1
+asyncio==3.4.3
+aiohttp==3.9.0
+threading==1.0.0
+concurrent.futures==3.1.1
+# 数据库和配置管理
+sqlalchemy==2.0.23
+alembic==1.13.1
+pyyaml==6.0.1
+python-dotenv==1.0.0
+# 监控和日志
+structlog==23.2.0
+psutil==5.9.6

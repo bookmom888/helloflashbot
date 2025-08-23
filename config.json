@@ -1,0 +1,39 @@
+{
+  "general": {
+    "max_windows": 5,
+    "default_mode": "visible",
+    "log_level": "INFO"
+  },
+  "session": {
+    "max_url_plays_per_session": 3,
+    "session_cooldown_hours": 2,
+    "session_timeout_hours": 24
+  },
+  "humanization": {
+    "min_delay": 0.5,
+    "max_delay": 3.0,
+    "typing_delay_min": 0.05,
+    "typing_delay_max": 0.15,
+    "mouse_move_probability": 0.25,
+    "scroll_probability": 0.3,
+    "pause_probability": 0.15
+  },
+  "browser": {
+    "default_browser": "chrome",
+    "stealth_mode": true,
+    "disable_images": false,
+    "disable_js": false,
+    "page_load_timeout": 30,
+    "element_wait_timeout": 10
+  },
+  "proxy": {
+    "validation_timeout": 10,
+    "validation_url": "http://httpbin.org/ip",
+    "max_validation_threads": 20
+  },
+  "video": {
+    "video_load_timeout": 15,
+    "ad_wait_timeout": 5,
+    "max_stuck_count": 5
+  }
+}

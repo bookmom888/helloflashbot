@@ -1,0 +1,24 @@
+# 代理示例文件
+# 支持以下格式:
+
+# HTTP代理 (无认证)
+# http://127.0.0.1:8080
+
+# HTTP代理 (带认证)
+# http://username:password@proxy.example.com:8080
+
+# SOCKS5代理 (无认证)
+# socks5://127.0.0.1:1080
+
+# SOCKS5代理 (带认证)
+# socks5://username:password@proxy.example.com:1080
+
+# 简单格式 (host:port:username:password:type)
+# 127.0.0.1:8080:username:password:http
+# 127.0.0.1:1080:username:password:socks5
+
+# 最简格式 (host:port, 默认为HTTP)
+# 127.0.0.1:8080
+# 127.0.0.1:3128
+
+# 注意: 请删除 # 号并填入真实代理信息

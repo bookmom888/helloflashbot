@@ -1,0 +1,16 @@
+# 视频URL示例文件
+# 每行一个URL
+
+# YouTube视频示例
+# https://www.youtube.com/watch?v=dQw4w9WgXcQ
+# https://www.youtube.com/watch?v=jNQXAC9IVRw
+
+# Bilibili视频示例
+# https://www.bilibili.com/video/BV1xx411c7mu
+# https://www.bilibili.com/video/BV1Ab411C7ZQ
+
+# 其他视频网站示例
+# https://example.com/video1.html
+# https://example.com/video2.html
+
+# 注意: 请删除 # 号并填入真实视频URL

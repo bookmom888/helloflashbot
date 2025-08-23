@@ -1,0 +1,18 @@
+2025-08-22 20:08:40,777 - proxy_manager - INFO - 从TXT文件加载了 663 个代理
+2025-08-22 20:08:40,780 - proxy_manager - INFO - 加载了 0 个API代理配置
+2025-08-22 20:08:40,790 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): httpbin.org:80
+2025-08-22 20:08:47,411 - proxy_manager - DEBUG - 浏览器验证代理失败: attempted relative import with no known parent package
+2025-08-22 20:08:48,413 - proxy_manager - DEBUG - 代理验证重试 1/2: 202.91.70.148:50101
+2025-08-22 20:08:48,414 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): httpbin.org:80
+2025-08-22 20:08:55,089 - proxy_manager - DEBUG - 浏览器验证代理失败: attempted relative import with no known parent package
+2025-08-22 20:08:56,090 - proxy_manager - DEBUG - 代理验证重试 2/2: 202.91.70.148:50101
+2025-08-22 20:08:56,091 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): httpbin.org:80
+2025-08-22 20:09:02,676 - proxy_manager - DEBUG - 浏览器验证代理失败: attempted relative import with no known parent package
+2025-08-22 20:09:02,676 - proxy_manager - INFO - 手动标记代理为可用: 202.91.70.148:50101
+2025-08-22 20:09:02,679 - proxy_manager - INFO - 成功保存 663 个代理到 TXT 文件
+2025-08-22 20:09:05,688 - proxy_manager - INFO - 成功保存 663 个代理到 TXT 文件
+2025-08-22 20:09:05,694 - proxy_manager - INFO - 成功保存 663 个代理到 TXT 文件
+2025-08-22 20:09:05,842 - proxy_manager - INFO - 从TXT文件加载了 663 个代理
+2025-08-22 20:09:05,843 - proxy_manager - INFO - 加载了 0 个API代理配置
+2025-08-22 20:09:05,899 - proxy_manager - INFO - 成功保存 664 个代理到 TXT 文件
+2025-08-22 20:09:05,904 - proxy_manager - INFO - 从文件导入 1 个代理

@@ -1,0 +1,133 @@
+# 代理管理系统配置文件
+# 此文件包含所有高优先级改进的配置选项
+
+# 代理管理器核心配置
+proxy_manager:
+  # 代理验证配置
+  validation:
+    timeout: 10                    # 验证超时时间（秒）
+    max_retries: 3                 # 最大重试次数
+    retry_delay: 1.0               # 重试延迟（秒）
+    max_threads: 10                # 最大验证线程数
+    urls:                          # 验证URL列表
+      - 'http://httpbin.org/ip'
+      - 'https://api.ipify.org?format=json'
+      - 'http://ip-api.com/json'
+  
+  # 存储配置
+  storage:
+    use_database: true             # 是否使用数据库存储
+    db_path: 'data/proxies.db'     # 数据库文件路径
+    json_backup_path: 'data/proxies.json'  # JSON备份文件路径
+    auto_backup: true              # 是否自动备份
+    backup_interval: 3600          # 备份间隔（秒）
+  
+  # 健康检查配置
+  health_check:
+    interval: 300                  # 健康检查间隔（秒）
+    max_error_count: 5             # 最大错误次数
+    error_threshold_time: 300      # 错误阈值时间（秒）
+  
+  # 代理轮换配置
+  rotation:
+    strategy: 'round_robin'        # 轮换策略：round_robin, random, weighted
+    avoid_recent_used: true        # 避免使用最近使用的代理
+    recent_used_threshold: 30      # 最近使用阈值（秒）
+
+# 异步验证配置
+async_validation:
+  enabled: true                    # 是否启用异步验证
+  max_concurrent: 50               # 最大并发数
+  timeout: 10                      # 验证超时时间（秒）
+  test_urls:                       # 测试URL列表
+    - 'http://httpbin.org/ip'
+    - 'https://api.ipify.org?format=json'
+
+# API代理服务配置
+api_proxies:
+  enabled: false                   # 是否启用API代理服务
+  providers:
+    # 示例API提供商配置
+    example_provider:
+      api_url: 'https://api.example.com/proxies'
+      api_key: ''                  # 在环境变量中设置
+      headers:
+        Authorization: 'Bearer {api_key}'
+      params:
+        format: 'json'
+        type: 'http'
+      rate_limit: 100              # 每小时请求限制
+    
+    # 可以添加更多提供商
+    # another_provider:
+    #   api_url: 'https://api.another.com/proxies'
+    #   api_key: ''
+    #   rate_limit: 200
+
+# 日志配置
+logging:
+  level: 'INFO'                    # 日志级别：DEBUG, INFO, WARNING, ERROR
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  
+  # 文件日志配置
+  file:
+    enabled: true                  # 是否启用文件日志
+    path: 'logs/proxy_manager.log' # 日志文件路径
+    max_size: '10MB'               # 单个日志文件最大大小
+    backup_count: 5                # 保留的备份文件数量
+  
+  # 控制台日志配置
+  console:
+    enabled: true                  # 是否启用控制台日志
+
+# 监控配置
+monitoring:
+  enabled: true                    # 是否启用监控系统
+  
+  # 指标收集配置
+  metrics:
+    collect_interval: 60           # 指标收集间隔（秒）
+    retention_minutes: 60          # 指标保留时间（分钟）
+  
+  # 告警配置
+  alerts:
+    enabled: true                  # 是否启用告警
+    thresholds:
+      success_rate_min: 80         # 最低成功率阈值（%）
+      response_time_max: 10        # 最大响应时间阈值（秒）
+      error_rate_max: 20           # 最大错误率阈值（%）
+      cpu_usage_max: 90            # 最大CPU使用率阈值（%）
+      memory_usage_max: 90         # 最大内存使用率阈值（%）
+
+# 性能优化配置
+performance:
+  # 连接池配置
+  connection_pool:
+    max_connections: 100           # 最大连接数
+    max_connections_per_host: 10   # 每个主机最大连接数
+    keepalive_timeout: 30          # 连接保持时间（秒）
+  
+  # 缓存配置
+  cache:
+    enabled: true                  # 是否启用缓存
+    ttl: 300                       # 缓存生存时间（秒）
+    max_size: 1000                 # 最大缓存条目数
+
+# 安全配置
+security:
+  # SSL/TLS配置
+  ssl:
+    verify_certificates: false     # 是否验证SSL证书
+    use_system_ca: true           # 是否使用系统CA证书
+  
+  # 代理认证配置
+  authentication:
+    timeout: 30                    # 认证超时时间（秒）
+    max_retries: 2                 # 认证最大重试次数
+
+# 调试配置
+debug:
+  enabled: false                   # 是否启用调试模式
+  verbose_logging: false           # 是否启用详细日志
+  save_failed_requests: false      # 是否保存失败的请求
+  failed_requests_path: 'debug/failed_requests.log'
