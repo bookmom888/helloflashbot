@@ -22,10 +22,10 @@ import concurrent.futures
 from datetime import datetime
 import logging
 import asyncio
-from .async_proxy_validator import AsyncProxyValidator
-from .database_manager import DatabaseManager
-from .config_manager import get_config_manager, ConfigManager
-from .monitoring_logger import get_monitoring_system
+from async_proxy_validator import AsyncProxyValidator
+from database_manager import DatabaseManager
+from config_manager import get_config_manager, ConfigManager
+from monitoring_logger import get_monitoring_system
 
 class ProxyManager:
     """代理管理器"""

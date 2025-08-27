@@ -22,7 +22,7 @@ from typing import Dict, List, Optional, Tuple
 from datetime import datetime
 import logging
 import base64
-from .advanced_fingerprint import AdvancedFingerprintEngine
+from advanced_fingerprint import AdvancedFingerprintEngine
 
 class FingerprintEngine:
     """设备指纹生成引擎"""

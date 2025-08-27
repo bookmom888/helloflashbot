@@ -32,7 +32,7 @@ from selenium.common.exceptions import WebDriverException, TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from .anti_detection_advanced import AdvancedAntiDetection
+from anti_detection_advanced import AdvancedAntiDetection
 
 class BrowserAutomation:
     """浏览器自动化管理器"""

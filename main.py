@@ -26,15 +26,15 @@ from typing import Dict, List, Optional, Tuple
 import sys
 
 # 导入自定义模块
-from src.proxy_manager import ProxyManager
-from src.fingerprint_engine import FingerprintEngine
-from src.browser_automation import BrowserAutomation
-from src.humanization import HumanizationEngine
-from src.session_manager import SessionManager
-from src.video_player import VideoPlayer
-from src.window_manager import WindowManager
-from src.platform_config import PlatformConfig, PlatformType
-from src.utils.logger import setup_logger
+from proxy_manager import ProxyManager
+from fingerprint_engine import FingerprintEngine
+from browser_automation import BrowserAutomation
+from humanization import HumanizationEngine
+from session_manager import SessionManager
+from video_player import VideoPlayer
+from window_manager import WindowManager
+from platform_config import PlatformConfig, PlatformType
+from logger import setup_logger
 
 class VideoAutomationTool:
     """视频自动化播放工具主界面"""
@@ -188,6 +188,26 @@ class VideoAutomationTool:
         ttk.Radiobutton(mode_frame, text="无头模式", variable=self.mode_var, 
                        value="headless").pack(side=tk.LEFT, padx=5)
         
+        # 代理模式选择
+        proxy_mode_frame = ttk.Frame(control_frame)
+        proxy_mode_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        ttk.Label(proxy_mode_frame, text="代理模式:").pack(side=tk.LEFT, padx=5)
+        self.proxy_mode_var = tk.StringVar(value="use_proxy")
+        ttk.Radiobutton(proxy_mode_frame, text="使用代理", variable=self.proxy_mode_var, 
+                       value="use_proxy", command=self.on_proxy_mode_changed).pack(side=tk.LEFT, padx=5)
+        ttk.Radiobutton(proxy_mode_frame, text="不使用代理", variable=self.proxy_mode_var, 
+                       value="no_proxy", command=self.on_proxy_mode_changed).pack(side=tk.LEFT, padx=5)
+        
+        # 代理状态显示
+        proxy_status_frame = ttk.Frame(control_frame)
+        proxy_status_frame.pack(fill=tk.X, padx=5, pady=2)
+        
+        ttk.Label(proxy_status_frame, text="代理状态:").pack(side=tk.LEFT, padx=5)
+        self.proxy_status_label = ttk.Label(proxy_status_frame, text="准备使用代理", 
+                                          foreground="blue")
+        self.proxy_status_label.pack(side=tk.LEFT, padx=5)
+        
         # 主控制按钮
         btn_frame = ttk.Frame(control_frame)
         btn_frame.pack(fill=tk.X, padx=5, pady=10)
@@ -204,6 +224,24 @@ class VideoAutomationTool:
         
         ttk.Button(btn_frame, text="暂停/恢复", 
                   command=self.toggle_pause).pack(side=tk.LEFT, padx=5)
+        
+        # 测试功能按钮
+        test_btn_frame = ttk.Frame(control_frame)
+        test_btn_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        self.test_direct_btn = ttk.Button(test_btn_frame, text="测试直接播放", 
+                                        command=self.test_direct_play,
+                                        style="Accent.TButton")
+        self.test_direct_btn.pack(side=tk.LEFT, padx=5)
+        
+        # 添加说明文本
+        info_frame = ttk.Frame(control_frame)
+        info_frame.pack(fill=tk.X, padx=5, pady=2)
+        
+        info_text = "💡 提示: 选择'不使用代理'可直接播放视频，无需配置代理服务器"
+        self.info_label = ttk.Label(info_frame, text=info_text, 
+                                   foreground="gray", font=("TkDefaultFont", 8))
+        self.info_label.pack(anchor=tk.W, padx=5)
     
     def create_proxy_tab(self, parent):
         """创建代理管理标签页"""
@@ -756,10 +794,21 @@ class VideoAutomationTool:
                 messagebox.showerror("错误", "请先添加视频URL")
                 return
             
-            proxies = self.proxy_manager.get_valid_proxies()
-            if not proxies:
-                messagebox.showerror("错误", "没有有效的代理服务器")
-                return
+            # 检查代理模式
+            proxy_mode = self.proxy_mode_var.get()
+            proxies = []
+            
+            if proxy_mode == "use_proxy":
+                # 使用代理模式
+                proxies = self.proxy_manager.get_valid_proxies()
+                if not proxies:
+                    messagebox.showerror("错误", "没有有效的代理服务器\n请导入并验证代理，或切换到'不使用代理'模式")
+                    return
+                self.log_message("INFO", f"使用代理模式 - 可用代理数: {len(proxies)}")
+            else:
+                # 不使用代理模式
+                proxies = []
+                self.log_message("INFO", "不使用代理模式 - 直接播放")
             
             window_count = int(self.window_count_var.get())
             
@@ -767,6 +816,12 @@ class VideoAutomationTool:
             self.is_running = True
             self.start_btn.config(state=tk.DISABLED)
             self.stop_btn.config(state=tk.NORMAL)
+            
+            # 更新代理状态显示
+            if proxy_mode == "use_proxy":
+                self.proxy_status_label.config(text=f"使用代理 ({len(proxies)}个)", foreground="blue")
+            else:
+                self.proxy_status_label.config(text="直接播放模式", foreground="green")
             
             # 启动自动化线程
             self.automation_thread = threading.Thread(
@@ -776,7 +831,8 @@ class VideoAutomationTool:
             )
             self.automation_thread.start()
             
-            self.log_message("INFO", f"开始自动化播放 - 窗口数: {window_count}")
+            mode_text = "代理模式" if proxy_mode == "use_proxy" else "直接播放模式"
+            self.log_message("INFO", f"开始自动化播放 - 模式: {mode_text}, 窗口数: {window_count}")
             
         except Exception as e:
             self.log_message("ERROR", f"启动自动化失败: {str(e)}")
@@ -815,6 +871,99 @@ class VideoAutomationTool:
         
         except Exception as e:
             self.log_message("ERROR", f"暂停/恢复操作失败: {str(e)}")
+    
+    def on_proxy_mode_changed(self):
+        """代理模式改变时的回调"""
+        try:
+            proxy_mode = self.proxy_mode_var.get()
+            if proxy_mode == "no_proxy":
+                self.proxy_status_label.config(text="直接播放模式", foreground="green")
+                self.log_message("INFO", "切换到直接播放模式（不使用代理）")
+            else:
+                self.proxy_status_label.config(text="准备使用代理", foreground="blue")
+                self.log_message("INFO", "切换到代理模式")
+        except Exception as e:
+            self.log_message("ERROR", f"代理模式切换失败: {str(e)}")
+    
+    def test_direct_play(self):
+        """测试直接播放功能"""
+        try:
+            # 获取测试URL
+            urls = self.get_video_urls()
+            if not urls:
+                # 使用默认测试URL
+                test_url = "https://www.bilibili.com/video/BV1GJ411x7h7"
+                self.log_message("INFO", f"使用默认测试URL: {test_url}")
+            else:
+                test_url = urls[0]
+                self.log_message("INFO", f"使用第一个URL进行测试: {test_url}")
+            
+            # 禁用测试按钮
+            self.test_direct_btn.config(state=tk.DISABLED)
+            self.test_direct_btn.config(text="正在测试...")
+            
+            # 在后台线程中运行测试
+            def test_thread():
+                try:
+                    # 生成指纹
+                    fingerprint = self.fingerprint_engine.generate_fingerprint()
+                    
+                    # 浏览器配置（无代理模式）
+                    browser_config = {
+                        'headless': self.mode_var.get() == "headless",
+                        'stealth': True,
+                        'disable_images': False,
+                        'disable_js': False
+                    }
+                    
+                    self.log_message("INFO", "开始测试直接播放（无代理模式）")
+                    
+                    # 创建浏览器 - 不使用代理
+                    driver = self.browser_automation.create_browser(
+                        proxy=None, 
+                        fingerprint=fingerprint, 
+                        config=browser_config
+                    )
+                    
+                    if not driver:
+                        self.log_message("ERROR", "创建浏览器失败")
+                        return False
+                    
+                    self.log_message("INFO", f"成功创建浏览器，开始播放测试视频")
+                    
+                    # 播放视频（测试30秒）
+                    play_duration = 30
+                    success = self.video_player.play_video(
+                        driver, test_url, self.humanization, play_duration
+                    )
+                    
+                    if success:
+                        self.log_message("INFO", "✅ 直接播放测试成功")
+                        messagebox.showinfo("测试成功", "直接播放测试成功！\n视频可以正常播放。")
+                    else:
+                        self.log_message("ERROR", "❌ 直接播放测试失败")
+                        messagebox.showerror("测试失败", "直接播放测试失败。\n请检查网络连接或URL有效性。")
+                    
+                    # 关闭浏览器
+                    driver.quit()
+                    return success
+                    
+                except Exception as e:
+                    self.log_message("ERROR", f"测试过程中发生错误: {str(e)}")
+                    messagebox.showerror("测试错误", f"测试过程中发生错误:\n{str(e)}")
+                    return False
+                
+                finally:
+                    # 恢复测试按钮
+                    self.root.after(0, lambda: self.test_direct_btn.config(
+                        state=tk.NORMAL, text="测试直接播放"))
+            
+            # 启动测试线程
+            threading.Thread(target=test_thread, daemon=True).start()
+            
+        except Exception as e:
+            self.log_message("ERROR", f"启动直接播放测试失败: {str(e)}")
+            self.test_direct_btn.config(state=tk.NORMAL, text="测试直接播放")
     
     def get_video_urls(self):
         """获取视频URL列表"""
