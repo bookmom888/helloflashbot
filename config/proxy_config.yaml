@@ -1,0 +1,64 @@
+api_proxies:
+  enabled: false
+  providers:
+    example_provider:
+      api_key: ''
+      api_url: https://api.example.com/proxies
+      headers:
+        Authorization: Bearer {api_key}
+      params:
+        format: json
+        type: http
+      rate_limit: 100
+async_validation:
+  enabled: true
+  max_concurrent: 50
+  test_urls:
+  - http://httpbin.org/ip
+  - https://api.ipify.org?format=json
+  timeout: 10
+logging:
+  console:
+    enabled: true
+  file:
+    backup_count: 5
+    enabled: true
+    max_size: 10MB
+    path: logs/proxy_manager.log
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+monitoring:
+  alerts:
+    enabled: false
+    thresholds:
+      error_rate_max: 20
+      response_time_max: 10
+      success_rate_min: 80
+  enabled: false
+  metrics:
+    collect_interval: 60
+    retention_days: 7
+proxy_manager:
+  health_check:
+    error_threshold_time: 300
+    interval: 300
+    max_error_count: 5
+  rotation:
+    avoid_recent_used: true
+    recent_used_threshold: 30
+    strategy: round_robin
+  storage:
+    auto_backup: true
+    backup_interval: 3600
+    db_path: data/proxies.db
+    json_backup_path: data/proxies.json
+    use_database: true
+  validation:
+    max_retries: 3
+    max_threads: 10
+    retry_delay: 1.0
+    timeout: 10
+    urls:
+    - http://httpbin.org/ip
+    - https://api.ipify.org?format=json
+    - http://ip-api.com/json

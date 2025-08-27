@@ -26,7 +26,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import pyautogui
-from .human_behavior_advanced import AdvancedHumanBehavior
+from human_behavior_advanced import AdvancedHumanBehavior
 
 class HumanizationEngine:
     """拟人化操作引擎"""

@@ -6,10 +6,10 @@
 
 import sys
 import logging
-from src.browser_automation import BrowserAutomation
-from src.video_player import VideoPlayer
-from src.humanization import HumanizationEngine
-from src.fingerprint_engine import FingerprintEngine
+from browser_automation import BrowserAutomation
+from video_player import VideoPlayer
+from humanization import HumanizationEngine
+from fingerprint_engine import FingerprintEngine
 
 # 配置日志
 logging.basicConfig(
