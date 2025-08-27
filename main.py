@@ -26,20 +26,21 @@ from typing import Dict, List, Optional, Tuple
 import sys
 
 # 导入自定义模块
-from src.proxy_manager import ProxyManager
-from src.fingerprint_engine import FingerprintEngine
-from src.browser_automation import BrowserAutomation
-from src.humanization import HumanizationEngine
-from src.session_manager import SessionManager
-from src.video_player import VideoPlayer
-from src.window_manager import WindowManager
-from src.platform_config import PlatformConfig, PlatformType
-from src.utils.logger import setup_logger
+from proxy_manager import ProxyManager
+from fingerprint_engine import FingerprintEngine
+from browser_automation import BrowserAutomation
+from humanization import HumanizationEngine
+from session_manager import SessionManager
+from video_player import VideoPlayer
+from window_manager import WindowManager
+from platform_config import PlatformConfig, PlatformType
+from logger import setup_logger
+from config import config
 
 class VideoAutomationTool:
     """视频自动化播放工具主界面"""
     
-    def __init__(self):
+    def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.title("视频自动化播放工具 v1.0")
         self.root.geometry("1200x800")
@@ -52,7 +53,7 @@ class VideoAutomationTool:
         self.browser_automation = BrowserAutomation()
         self.humanization = HumanizationEngine()
         self.video_player = VideoPlayer()
-        self.window_manager = WindowManager(max_windows=5)
+        self.window_manager = WindowManager(max_windows=config.max_windows)
         self.platform_config = PlatformConfig()
         
         # 状态变量
@@ -60,6 +61,11 @@ class VideoAutomationTool:
         self.video_urls = []
         self.start_time = None
         self.played_videos_count = 0
+        
+        # 线程锁保护共享变量
+        self._status_lock = threading.Lock()
+        self._urls_lock = threading.Lock()
+        self._count_lock = threading.Lock()
         
         # 日志队列
         self.log_queue = queue.Queue()
@@ -77,7 +83,7 @@ class VideoAutomationTool:
         # 启动状态更新
         self.update_status_display()
     
-    def create_interface(self):
+    def create_interface(self) -> None:
         """创建主界面"""
         # 创建主框架
         main_frame = ttk.Frame(self.root)
@@ -518,8 +524,11 @@ class VideoAutomationTool:
                     self.url_text.insert(1.0, urls)
                 
                 self.log_message("INFO", f"成功导入URL文件: {file_path}")
-        except Exception as e:
+        except (IOError, OSError, UnicodeDecodeError) as e:
             self.log_message("ERROR", f"导入URL文件失败: {str(e)}")
+            messagebox.showerror("错误", f"导入文件失败: {str(e)}")
+        except Exception as e:
+            self.log_message("ERROR", f"导入URL文件时发生未知错误: {str(e)}")
             messagebox.showerror("错误", f"导入文件失败: {str(e)}")
     
     def save_urls(self):
@@ -537,8 +546,11 @@ class VideoAutomationTool:
                     f.write(urls)
                 
                 self.log_message("INFO", f"成功保存URL文件: {file_path}")
-        except Exception as e:
+        except (IOError, OSError, UnicodeEncodeError) as e:
             self.log_message("ERROR", f"保存URL文件失败: {str(e)}")
+            messagebox.showerror("错误", f"保存文件失败: {str(e)}")
+        except Exception as e:
+            self.log_message("ERROR", f"保存URL文件时发生未知错误: {str(e)}")
             messagebox.showerror("错误", f"保存文件失败: {str(e)}")
     
     def clear_urls(self):
@@ -633,8 +645,14 @@ class VideoAutomationTool:
                 self.update_proxy_tree()
                 self.log_message("INFO", f"成功导入 {imported_count} 个代理")
                 messagebox.showinfo("成功", f"成功导入 {imported_count} 个代理")
+        except (IOError, OSError) as e:
+            self.log_message("ERROR", f"读取代理文件失败: {str(e)}")
+            messagebox.showerror("错误", f"导入代理失败: {str(e)}")
+        except ValueError as e:
+            self.log_message("ERROR", f"代理文件格式错误: {str(e)}")
+            messagebox.showerror("错误", f"代理文件格式错误: {str(e)}")
         except Exception as e:
-            self.log_message("ERROR", f"导入代理文件失败: {str(e)}")
+            self.log_message("ERROR", f"导入代理文件时发生未知错误: {str(e)}")
             messagebox.showerror("错误", f"导入代理失败: {str(e)}")
     
     def validate_proxies(self):
@@ -747,7 +765,7 @@ class VideoAutomationTool:
         
         self.proxy_stats_label.config(text=f"总计: {total}, 有效: {valid}, 无效: {invalid}")
     
-    def start_automation(self):
+    def start_automation(self) -> None:
         """开始自动化播放"""
         try:
             # 获取配置
@@ -763,8 +781,9 @@ class VideoAutomationTool:
             
             window_count = int(self.window_count_var.get())
             
-            # 更新状态
-            self.is_running = True
+            # 更新状态（线程安全）
+            with self._status_lock:
+                self.is_running = True
             self.start_btn.config(state=tk.DISABLED)
             self.stop_btn.config(state=tk.NORMAL)
             
@@ -782,10 +801,11 @@ class VideoAutomationTool:
             self.log_message("ERROR", f"启动自动化失败: {str(e)}")
             messagebox.showerror("错误", f"启动失败: {str(e)}")
     
-    def stop_automation(self):
+    def stop_automation(self) -> None:
         """停止自动化播放"""
         try:
-            self.is_running = False
+            with self._status_lock:
+                self.is_running = False
             self.start_btn.config(state=tk.NORMAL)
             self.stop_btn.config(state=tk.DISABLED)
             
@@ -834,7 +854,8 @@ class VideoAutomationTool:
         """运行自动化流程"""
         try:
             self.start_time = datetime.now()
-            self.played_videos_count = 0
+            with self._count_lock:
+                self.played_videos_count = 0
             
             # 获取运行模式
             headless_mode = self.mode_var.get() == "headless"
@@ -847,8 +868,9 @@ class VideoAutomationTool:
             
             # 启动多个窗口
             for i in range(window_count):
-                if not self.is_running:
-                    break
+                with self._status_lock:
+                    if not self.is_running:
+                        break
                 
                 # 分配代理和指纹
                 proxy = None
@@ -907,7 +929,8 @@ class VideoAutomationTool:
             
             # 如果是播放完成，增加计数
             if "播放完成" in message:
-                self.played_videos_count += 1
+                with self._count_lock:
+                    self.played_videos_count += 1
         
         except Exception as e:
             self.log_message("ERROR", f"处理窗口状态更新失败: {str(e)}")
@@ -935,8 +958,10 @@ class VideoAutomationTool:
             max_count = self.window_manager.max_windows
             self.active_windows_label.config(text=f"{active_count}/{max_count}")
             
-            # 更新播放视频数量
-            self.played_videos_label.config(text=str(self.played_videos_count))
+            # 更新播放视频数量（线程安全）
+            with self._count_lock:
+                played_count = self.played_videos_count
+            self.played_videos_label.config(text=str(played_count))
             
             # 更新运行时间
             if self.start_time:
@@ -984,7 +1009,7 @@ class VideoAutomationTool:
         except Exception as e:
             self.log_message("ERROR", f"更新窗口树失败: {str(e)}")
     
-    def log_message(self, level, message):
+    def log_message(self, level: str, message: str) -> None:
         """记录日志消息"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = f"[{timestamp}] [{level}] {message}"
@@ -1060,8 +1085,9 @@ class VideoAutomationTool:
     def on_closing(self):
         """程序关闭处理"""
         try:
-            if self.is_running:
-                self.stop_automation()
+            with self._status_lock:
+                if self.is_running:
+                    self.stop_automation()
             
             # 关闭窗口管理器
             self.window_manager.shutdown()
@@ -1075,12 +1101,11 @@ class VideoAutomationTool:
             print(f"关闭程序时发生错误: {str(e)}")
             self.root.destroy()
 
-def main():
+def main() -> None:
     """主函数"""
-    # 创建必要的目录
-    os.makedirs("src", exist_ok=True)
-    os.makedirs("logs", exist_ok=True)
-    os.makedirs("data", exist_ok=True)
+    # 创建必要的目录（使用配置）
+    os.makedirs(config.logs_dir, exist_ok=True)
+    os.makedirs(config.data_dir, exist_ok=True)
     
     # 启动应用
     app = VideoAutomationTool()
